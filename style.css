@@ -29,7 +29,7 @@ li {
 /* Header Styles */
 .header-section {
     width: 100%;
-    height: 1000vh;
+    height: 100vh;
     padding: 0px 100px;
 }
 
@@ -85,6 +85,19 @@ li {
 
 .header-btn a:hover {
     background: var(--btn-h-clr);
+}
+
+.header-content {
+    height: 70vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-foto img {
+    position: relative;
+    right: -100px;
+    width: 70%;
 }
 
 
@@ -188,9 +201,8 @@ li {
         padding: 0px;
     }
 
-    .header-item a {
-        font-size: 1rem;
-        color: red;
+    .header-item a i {
+        font-size: 1.5rem;
     }
 
     .item-twoo i {
