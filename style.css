@@ -101,11 +101,16 @@ li {
 }
 
 @media only screen and (max-width: 950px) {
+    .header-section {
+        padding: 0px;
+    }
     .header-items {
-        bottom: 0;
         position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
         align-self: flex-end;
-        width: 70%;
+        min-width: 100%;
         height: 70px;
         justify-content: center;
         backdrop-filter: blur(50px);
@@ -126,15 +131,17 @@ li {
         color: var(--text-clr);
         transition: 0.5s;
     }
+
+    .header-brand {
+        margin-left: 30px;
+    }
+
+    .header-btn {
+        margin-right: 30px;
+    }
 }
 
 @media only screen and (max-width: 850px) {
-    .header-item a {
-        margin: 0 5px;
-        font-size: 15px;
-        font-weight: 500;
-    }
-
     .header-item {
         padding: 6px;
     }
@@ -156,20 +163,12 @@ li {
 }
 
 @media only screen and (max-width: 580px) {
-    .header-items {
-        left: 80px;
-    }
-
     .item-twoo i {
         margin: 0px 10px;
     }
 }
 
 @media only screen and (max-width: 500px) {
-    .header-items {
-        left: 60px;
-    }
-
     .item-twoo i {
         margin: 0px 5px;
     }
