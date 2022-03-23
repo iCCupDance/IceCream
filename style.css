@@ -312,6 +312,10 @@ li {
     .header-content__btn a {
         width: 100%;
     }
+
+    .header-content {
+        margin-top: 50px;
+    }
 }
 
 @media only screen and (max-width: 380px) {
