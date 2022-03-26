@@ -26,6 +26,10 @@ li {
     --btn-h-clr: #ac053d;
 }
 
+.btm-clr {
+    border-bottom: 4px solid var(--btn-h-clr);
+}
+
 /* Header Styles */
 .header-section {
     width: 100%;
@@ -106,7 +110,9 @@ li {
     color: var(--text-clr);
 }
 
-.header-text p {
+.header-text p,
+.sugar-p,
+.product-i-p {
     font-size: 15px;
     font-weight: 500;
     color: #261919c0;
@@ -114,11 +120,13 @@ li {
     margin-top: 15px;
 }
 
-.header-content__btn {
+.header-content__btn,
+.sugar-btn {
     margin: 30px 0px;
 }
 
-.header-content__btn a {
+.header-content__btn a,
+.sugar-btn a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -136,7 +144,8 @@ li {
     margin-left: 3px;
 }
 
-.header-content__btn a:hover {
+.header-content__btn a:hover,
+.sugar-btn a:hover {
     background: var(--btn-h-clr);
 }
 
@@ -192,9 +201,128 @@ li {
     color: #fff;
 }
 
+/* Sugar Styles */
+.sugar-section {
+    width: 100%;
+    min-height: 70vh;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .sugar-foto img {
-    width: 200px;
-    margin-bottom: 100px;
+    width: 400px;
+}
+
+.sugar-htext {
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--text-clr);
+    line-height: 45px;
+}
+
+/* Product Styles */
+.product-section {
+    width: 100%;
+    min-height: 100%;
+    padding: 0 100px;
+    background-color: #fff;
+}
+
+.product-items {
+    text-align: center;
+}
+
+.product-htext {
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--text-clr);
+    padding: 100px 0px 50px 0px;
+}
+
+.product-item {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.product-item ul {
+    display: flex;
+}
+
+.product-item ul li {
+    padding: 0px 15px;
+}
+
+.product-item ul li a {
+    font-size: 20px;
+    font-weight: normal;
+    color: var(--text-clr);
+
+    transition: 0.5s;
+}
+
+.product-item ul li a:hover {
+    color: var(--btn-h-clr);
+}
+
+.product-icecream {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+.product-i-img img {
+    width: 500px;
+}
+
+.product-i-htext {
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--text-clr);
+}
+
+.product-money {
+    margin: 10px 0px 20px 0px;
+}
+
+.product-money .span-1 {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--text-clr);
+}
+
+.product-money .span-2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-clr);
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.product-buy button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 45px;
+    background: var(--btn-clr);
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    transition: 0.5s;
+    border: none;
+    cursor: pointer;
+}
+
+.product-buy button:hover {
+    background: var(--btn-h-clr);
 }
 
 
@@ -207,7 +335,15 @@ li {
 
 
 
+
+
 /* Responsive */
+@media only screen and (max-width: 1200px) {
+    .product-i-img img {
+        width: 400px;
+    }
+}
+
 @media only screen and (max-width: 1130px) {
     .header-foto img {
         right: -100px;
@@ -223,7 +359,9 @@ li {
         font-weight: 600;
     }
     
-    .header-text p {
+    .header-text p,
+    .sugar-p,
+    .product-i-p {
         font-size: 12px;
         font-weight: 500;
         line-height: 20px;
@@ -231,6 +369,23 @@ li {
 
     .benefit-item {
         margin: 20px 20px;
+    }
+
+    .product-item ul li a {
+        font-size: 15px;
+    }
+
+    .product-i-htext {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .product-money .span-1 {
+        font-size: 20px;
+    }
+    
+    .product-money .span-2 {
+        font-size: 15px;
     }
 }
 
@@ -251,11 +406,18 @@ li {
         text-align: center;
     }
 
+    .sugar-section {
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
     .header-text {
         margin-bottom: 50px;
     }
 
-    .header-content__btn a {
+    .header-content__btn a,
+    .sugar-btn a {
         width: 100%;
         text-align: center;
         justify-content: center;
@@ -268,6 +430,10 @@ li {
 
     .benefit-section {
         margin-top: 150px;
+    }
+
+    .product-i-img img {
+        width: 350px;
     }
 }
 
@@ -319,11 +485,57 @@ li {
     .benifit-mb1 {
         margin-bottom: 100px;
     }
+
+    .product-htext {
+        font-size: 30px;
+    }
+
+    .product-item ul li a {
+        font-size: 13px;
+        text-transform: unset;
+    }
+
+    .product-item ul li {
+        padding: 0px 10px;
+    }
+
+    .product-icecream {
+        flex-direction: column;
+        text-align: center;
+        margin: 50px 0px;
+    }
+
+    .product-buy button {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flxdrc {
+        flex-direction: column-reverse;
+    }
+
+    .mb-3 {
+        margin-bottom: 150px;
+    }
 }
 
 @media only screen and (max-width: 850px) {
     .header-item {
         padding: 6px;
+    }
+
+    .product-htext {
+        padding: 100px 0px 30px 0px;
+    }
+
+    .product-item ul {
+        flex-direction: column;
+    }
+
+    .product-item ul li {
+        padding: 10px 0px;
     }
 }
 
@@ -340,6 +552,10 @@ li {
         font-size: 2rem;
         margin: 0px 15px;
     }
+
+    .product-i-img img {
+        width: 300px;
+    }
 }
 
 @media only screen and (max-width: 679px) {
@@ -351,6 +567,10 @@ li {
 @media only screen and (max-width: 580px) {
     .item-twoo i {
         margin: 0px 10px;
+    }
+
+    .product-icecream {
+        margin: 70px 0px;
     }
 }
 
@@ -368,10 +588,6 @@ li {
         display: none;
     }
 
-    .header-foto img {
-        right: 0px;
-    }
-
     .header-text h5 {
         font-size: 15px;
         font-weight: 500;
@@ -382,7 +598,8 @@ li {
         font-weight: 500;
     }
     
-    .header-text p {
+    .header-text p,
+    .sugar-p {
         font-size: 10px;
         font-weight: 500;
         line-height: 20px;
@@ -392,12 +609,21 @@ li {
         width: 300px;
     }
 
+    .sugar-foto img {
+        width: 250px;
+    }
+
     .header-content__btn a {
         width: 100%;
     }
 
     .header-content {
         margin-top: 50px;
+    }
+
+    .sugar-htext {
+        font-size: 30px;
+        font-weight: 500;
     }
 }
 
@@ -415,6 +641,10 @@ li {
     }
 
     .header-foto img {
+        width: 200px;
+    }
+
+    .sugar-foto img {
         width: 200px;
     }
 }
